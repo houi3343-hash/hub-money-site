@@ -1,2 +1,2 @@
-/** Canonical origin: set NEXT_PUBLIC_SITE_URL when a custom domain is connected. */
-export function siteUrl(){const explicit=process.env.NEXT_PUBLIC_SITE_URL?.trim();if(explicit)return explicit.replace(/\/$/,'');const vercel=process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();if(vercel)return 'https://'+vercel.replace(/^https?:\/\//,'').replace(/\/$/,'');return 'https://hub-money-site-mirae10.vercel.app';}
+/** Canonical origin. Override with NEXT_PUBLIC_SITE_URL after connecting a custom domain. */
+export function siteUrl(){const explicit=process.env.NEXT_PUBLIC_SITE_URL?.trim();if(explicit)return explicit.replace(/\/$/,'');return 'https://hub-money-site.vercel.app';}
