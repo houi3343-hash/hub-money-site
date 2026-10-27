@@ -1,1 +1,2 @@
-import type {MetadataRoute} from 'next';export default function robots():MetadataRoute.Robots{const origin=process.env.NEXT_PUBLIC_SITE_URL;return{rules:{userAgent:'*',allow:'/'},...(origin?{sitemap:origin.replace(/\/$/,'')+'/sitemap.xml'}:{})}}
+import type {MetadataRoute} from 'next';import {siteUrl} from './site-url';
+export default function robots():MetadataRoute.Robots{return{rules:{userAgent:'*',allow:'/'},sitemap:siteUrl()+'/sitemap.xml'}}

@@ -1,1 +1,2 @@
-import type {MetadataRoute} from 'next';export default function sitemap():MetadataRoute.Sitemap{const origin=process.env.NEXT_PUBLIC_SITE_URL||'https://example.com';return['','/price','/fee','/guide','/safety','/faq'].map((path,i)=>({url:origin.replace(/\/$/,'')+path,changeFrequency:'monthly' as const,priority:i===0?1:0.75}))}
+import type {MetadataRoute} from 'next';import {siteUrl} from './site-url';
+export default function sitemap():MetadataRoute.Sitemap{const origin=siteUrl();return['','/price','/fee','/guide','/safety','/faq'].map((path,i)=>({url:origin+path,changeFrequency:'monthly' as const,priority:i===0?1:0.75}))}
