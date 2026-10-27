@@ -11,4 +11,5 @@ export const metadata:Metadata={
  openGraph:{type:'website',locale:'ko_KR',siteName:'허브머니상',title:'허브머니상 | 피망머니상 시세와 수수료 정보',description:'피망머니상 시세 비교 기준부터 수수료 계산 방식, 게임 이용과 사칭 예방 정보까지.',url:'/'},
  robots:{index:true,follow:true}
 };
-export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="ko"><body><a className="skip-link" href="#content">본문으로 바로가기</a>{children}</body></html>}
+const websiteSchema={'@context':'https://schema.org','@type':'WebSite',name:'허브머니상',url:siteUrl(),inLanguage:'ko-KR',description:'피망머니상 시세 비교 기준과 수수료 구조, 게임 이용 및 사칭 예방 정보를 안내하는 독립 정보 사이트'};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="ko"><body><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(websiteSchema).replace(/</g,'\\u003c')}}/><a className="skip-link" href="#content">본문으로 바로가기</a>{children}</body></html>}
