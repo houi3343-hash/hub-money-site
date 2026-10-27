@@ -4,6 +4,7 @@ import {siteUrl} from './site-url';
 export const viewport:Viewport={themeColor:'#0b0b0d',width:'device-width',initialScale:1};
 export const metadata:Metadata={
  metadataBase:new URL(siteUrl()),
+ verification:{google:'UgYRnj1WlbPf5SSMo7jRIuNXxn9JWSbYl7RSyVH0G3o'},
  title:{default:'피망머니상 시세·수수료·이용안내 | 허브머니상',template:'%s | 허브머니상'},
  description:'피망머니상 관련 시세 비교 기준과 수수료 계산 방식, 피망포커 이용 가이드를 허브머니상에서 확인하세요. 게임머니 정보와 거래 시 주의사항, 자주 묻는 질문까지 알기 쉽게 정리했습니다.',
  alternates:{canonical:'/'},
